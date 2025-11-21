@@ -1,89 +1,120 @@
 /* Main Container */
 .students-container {
   width: 100%;
-  padding: 40px 20px;
+  padding: 50px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #eef3ff;
+  background: linear-gradient(145deg, #e8edff, #f5f7ff);
   min-height: 100vh;
   overflow-y: auto;
+  animation: fadeBackground 1.2s ease-in-out;
 }
 
 /* Heading */
 .students-heading {
-  font-size: 36px;
+  font-size: 2.4rem;
   font-weight: 700;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   color: #1e2a38;
   text-align: center;
-  animation: fadeDown 0.4s ease-in-out;
+  animation: fadeDown 0.5s ease-in-out;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
+.students-heading::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: #586ff5;
+  border-radius: 3px;
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* Card */
 .students-card {
   background: #ffffff;
-  padding: 35px;
-  border-radius: 20px;
+  padding: 40px;
+  border-radius: 22px;
   width: 100%;
-  max-width: 600px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-  animation: fadeUp 0.4s ease;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-bottom: 40px;
+  max-width: 620px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+  animation: fadeUp 0.5s ease;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+  margin-bottom: 45px;
+  border: 1px solid rgba(88, 115, 245, 0.07);
 }
 
 .students-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 25px rgba(88, 115, 245, 0.18);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(88, 115, 245, 0.15);
+}
+
+.student-item{
+   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px; 
 }
 
 /* Form Fields */
 .form-group {
   display: flex;
   flex-direction: column;
-  margin-bottom: 18px;
+  margin-bottom: 22px;
 }
 
 .form-group label {
   font-weight: 600;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
   color: #1a2340;
+  font-size: 0.95rem;
 }
 
 .form-group input {
-  padding: 12px;
-  border: 1px solid #cbd3e1;
-  border-radius: 10px;
-  background: #f8faff;
-  font-size: 15px;
-  transition: border-color 0.25s, box-shadow 0.25s;
+  padding: 12px 14px;
+  border: 1px solid #d5dded;
+  border-radius: 12px;
+  background: #f9faff;
+  font-size: 0.95rem;
+  transition: 0.25s;
 }
 
 .form-group input:focus {
   border-color: #586ff5;
   outline: none;
-  box-shadow: 0 0 6px rgba(88, 115, 245, 0.4);
+  box-shadow: 0 0 8px rgba(88, 115, 245, 0.35);
 }
 
 /* Save Button */
 .submit-btn {
   width: 100%;
-  padding: 12px;
-  background: linear-gradient(120deg, #586ff5, #9c6bff);
+  padding: 14px;
+  background: linear-gradient(120deg, #5c73ff, #8a55ff);
   border: none;
   color: #ffffff;
-  font-size: 17px;
+  font-size: 1.05rem;
   font-weight: 600;
-  border-radius: 10px;
+  border-radius: 12px;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  transition: 0.3s;
+  letter-spacing: 0.3px;
 }
 
 .submit-btn:hover {
-  background: linear-gradient(120deg, #4657d3, #874cff);
-  box-shadow: 0 8px 22px rgba(140, 115, 255, 0.45);
-  transform: translateY(-2px) scale(1.02);
+  background: linear-gradient(120deg, #4c61e0, #7a42ff);
+  box-shadow: 0 10px 26px rgba(140, 115, 255, 0.45);
+  transform: translateY(-2px) scale(1.03);
+}
+
+/* Placeholder Style */
+input::placeholder {
+  color: #9aa2b8;
+  opacity: 0.8;
 }
 
 /* Animation Keyframes */
@@ -95,4 +126,20 @@
 @keyframes fadeDown {
   from { opacity: 0; transform: translateY(-20px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeBackground {
+  from { background: #ffffff; }
+  to { background: linear-gradient(145deg, #e8edff, #f5f7ff); }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .students-card {
+    padding: 28px;
+  }
+
+  .students-heading {
+    font-size: 1.9rem;
+  }
 }

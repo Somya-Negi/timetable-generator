@@ -89,9 +89,12 @@ const Students = ()=> {
 
           {studentsList.map((s) => (
             <li key={s.id} className="student-item">
-              <strong>{s.name}</strong> (ID: {s.studentId})  
-              <br />
-              Subjects: {s.subjects.join(", ")}
+              <div>
+                <strong>{s.name}</strong> (ID: {s.studentId})  
+                <br />
+                Subjects: {s.subjects.join(", ")}
+             </div>
+              
 
               <button 
                 className="delete-btn"
