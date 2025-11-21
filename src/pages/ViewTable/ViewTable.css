@@ -1,0 +1,120 @@
+/* Main container */
+.view-container {
+  width: 100%;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #eef3ff; /* Soft modern blue */
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+/* Heading */
+.view-heading {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #1e2a38;
+  text-align: center;
+  animation: fadeDown 0.4s ease-in-out;
+}
+
+/* Summary box */
+.summary-box {
+  background: #ffffff;
+  padding: 18px 24px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  font-size: 18px;
+  line-height: 26px;
+  margin-bottom: 25px;
+  color: #1a2340;
+  text-align: center;
+  animation: fadeUp 0.4s ease;
+}
+
+/* Action buttons */
+.action-buttons {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 12px;
+}
+
+.print-btn,
+.clear-btn {
+  padding: 12px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+/* Print Button */
+.print-btn {
+  background: linear-gradient(120deg, #586ff5, #9c6bff);
+  color: white;
+}
+
+.print-btn:hover {
+  background: linear-gradient(120deg, #4657d3, #874cff);
+  box-shadow: 0 8px 22px rgba(140,115,255,0.45);
+  transform: translateY(-2px) scale(1.02);
+}
+
+/* Clear Button */
+.clear-btn {
+  background: linear-gradient(120deg, #ff6363, #ff3d3d);
+  color: #fff;
+}
+
+.clear-btn:hover {
+  box-shadow: 0 8px 18px rgba(255, 87, 87, 0.4);
+  transform: scale(1.05);
+}
+
+/* Table Styling */
+.timetable-table {
+  width: 100%;
+  max-width: 900px;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  animation: fadeUp 0.4s ease;
+}
+
+.timetable-table th,
+.timetable-table td {
+  padding: 14px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+  border-bottom: 1px solid #e0e4f0;
+}
+
+.timetable-table th {
+  background: linear-gradient(120deg, #586ff5, #9c6bff);
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.timetable-table tr:hover td {
+  background: #f0f4ff;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

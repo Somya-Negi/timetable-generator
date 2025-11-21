@@ -1,0 +1,28 @@
+/* RESET EVERYTHING PROPERLY */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  background-color: #f5f6fa;
+}
+
+/* Remove scroll gaps and unwanted spacing */
+body {
+  overflow: hidden;
+  font-family: Inter, sans-serif;
+}
+
+html, body {
+  height: 100%;
+  overflow-y: scroll; /* Always show vertical scrollbar */
+  scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+body {
+  margin: 0;
+}

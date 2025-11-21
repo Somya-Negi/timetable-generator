@@ -1,0 +1,97 @@
+/* --- Layout Container --- */
+.layout-container {
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* --- Light / Dark Mode Colors --- */
+.layout-container.light {
+  background-color: oklch(87% 0.065 274.039); /* Soft light pastel */
+  color: #2b2b2b;
+}
+
+.layout-container.dark {
+  background-color: oklch(67.3% 0.182 276.935); /* Softer dark tone */
+  color: #f1f1f1;
+}
+
+/* --- Navbar --- */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 30px;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.65);
+  border-bottom: 1px solid rgba(180, 180, 180, 0.3);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  transition: background 0.3s ease;
+}
+
+.layout-container.dark .navbar {
+  background: rgba(0, 0, 0, 0.25); /* slightly transparent for glass effect */
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+/* --- Navbar Title --- */
+.navbar-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-right: 20px;
+}
+
+/* --- Menu --- */
+.navbar-menu {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.menu-item {
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 12px;
+  transition: all 0.25s ease;
+}
+
+.layout-container.light .menu-item:hover {
+  background-color: oklch(80% 0.1 274); /* soft hover light */
+  color: #2b2b2b;
+}
+
+.layout-container.dark .menu-item:hover {
+  background-color: oklch(55% 0.15 276); /* soft hover dark */
+  color: #f1f1f1;
+}
+
+/* --- Mode Toggle Button --- */
+.mode-toggle-btn {
+  padding: 7px 14px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  background-color: oklch(75% 0.1 275); /* neutral button for light mode */
+  color: #2b2b2b;
+}
+
+.layout-container.dark .mode-toggle-btn {
+  background-color: oklch(60% 0.15 276); /* softer dark button */
+  color: #f1f1f1;
+}
+
+.mode-toggle-btn:hover {
+  transform: scale(1.05);
+}
+
+/* --- Main Content --- */
+.main-content {
+  padding: 25px 35px;
+  flex-grow: 1;
+}
