@@ -93,7 +93,7 @@ const Students = ()=> {
                 <strong>{s.name}</strong> (ID: {s.studentId})  
                 <br />
                 Subjects: {s.subjects.join(", ")}
-             </div>
+              </div>
               
 
               <button 
